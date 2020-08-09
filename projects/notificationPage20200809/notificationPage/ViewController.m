@@ -29,6 +29,8 @@
 //
 //    [self.view addSubview: but1];
     
+    NSLog(@"23333");
+    
     [self.view addSubview:self.tableView];
     
     [self setNavigationBar];
