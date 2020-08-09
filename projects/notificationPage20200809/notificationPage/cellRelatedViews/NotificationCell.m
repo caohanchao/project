@@ -35,32 +35,14 @@
         [self setConstraintsForNotificationCell];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-
         self.backgroundColor = [UIColor systemGray6Color];
-        
-//        NSLog(@"%f",self.frame.size.width);
-        
     }
     return self;
 }
 
 // MARK: Set values
 -(void)setCellWithNoticeModel:(NoticeList *)notice{
-
-//    /// 时间格式化
-//    /// @param time 时间戳
-//    /// @param formatterStr 格式化formatter
-//    + (NSString *)formatterWithTime:(long)time Formatter:(NSString *)formatterStr
-//    {
-//    NSDate *date = [NSDate dateWithTimeIntervalSince1970: notice.postTime/1000];
-//        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-//        [formatter setDateFormat: @"YYYY-MM-dd HH:mm:ss"];
-////
-//        return [formatter stringFromDate: date];
-//    }
-    
     [self.timeTag setWithTime:notice.postTime];
-//    [self.timeTag setWithTime:[formatter stringFromDate: date]];
     [self.messageSummary setWithTitle:notice.title andContnetTip:notice.contentTip andContent:notice.content];
     [self.tipList setWithArray:notice.tipList];
     
@@ -136,8 +118,7 @@
 
 }
 
-
-// MARK: Override the setFrane method.
+// MARK: Override the setFrame method.
 // Since some of the subViews need cell's frame for initialization. The width of cell needs to be reset to prevent problems caused by the default 320 val
 -(void)setFrame:(CGRect)frame{
     frame.size.width = UIScreen.mainScreen.bounds.size.width;

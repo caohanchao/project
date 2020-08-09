@@ -39,15 +39,13 @@
 -(void)setConstraintForTimeTagView{
     [self.timeLabel sizeToFit];
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.mas_equalTo(self.center);
         make.centerX.mas_equalTo(self.mas_centerX);
         make.centerY.mas_equalTo(self.mas_centerY);
     }];
 }
 
 -(void)setWithTime:(NSString *)time{
-    NSLog(@"Setting with: %@", time);
-    
+//    NSLog(@"Setting with: %@", time);
     self.timeLabel.text = time;
 }
 

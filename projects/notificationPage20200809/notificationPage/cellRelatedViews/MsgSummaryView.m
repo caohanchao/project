@@ -66,6 +66,8 @@
     }
     return _contentLabel;
 }
+
+// MARK: Method that set constraints
 -(void)setConstraintsForMsgSummaryView{
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mas_top);//.offset(5);

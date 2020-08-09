@@ -6,7 +6,7 @@
 //  Copyright © 2020 zxc. All rights reserved.
 //
 
-#define CONTENT_WIDTH_FLOAT 300
+#define CONTENT_WIDTH_FLOAT 300         //the parameter represents NotificationCell->TipListView->contentLabel's area's width
 
 #import "ViewController.h"
 
@@ -21,18 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    UIButton *but1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 100)];
-//    [but1 setTitle:@"Fetch Data!" forState:UIControlStateNormal];
-//    [but1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [but1 addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventTouchUpInside];
-//
-//    [self.view addSubview: but1];
 
-    NSLog(@"12344");
-    
-    NSLog(@"23333");
-    
     [self.view addSubview:self.tableView];
     
     [self setNavigationBar];
@@ -53,11 +42,10 @@
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor systemGrayColor];
     
 }
-
+// Reserved for the bar button pressed action
 -(void)leftBarPressed{
     NSLog(@"Left bar buttom pressed!");
 }
-
 
 // MARK: Lazy load for properties
 -(UITableView *)tableView{
@@ -82,22 +70,19 @@
     return 1;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return 10;
     return self.noticeModel == nil ? 10 : self.noticeModel.noticeList.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return 300;
-    if(self.noticeModel == nil){
+    if(self.noticeModel == nil){    // If data hasn't been loaded
         return 300;
     }
     NSNumber *num = [self.noticeModel.heightsList objectAtIndex:indexPath.row];
-  
     return num.floatValue + 190;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NotificationCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NotificationCell class])];
     if(self.noticeModel != nil){
-        NSLog(@"诶嘿");
+//        NSLog(@"诶嘿");
         [cell setCellWithNoticeModel:[self.noticeModel.noticeList objectAtIndex:indexPath.row]];
     }
     return cell;
@@ -105,29 +90,26 @@
 
 // MARK: Local storage related
 -(void)readFromFile:(NSString *)fileName{
-    NSString *homeDir = NSHomeDirectory();
-    NSLog(@"%@", homeDir);
+//    NSString *homeDir = NSHomeDirectory();
+//    NSLog(@"%@", homeDir);
     
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *file = [NSString stringWithFormat:@"%@/%@.json", documentsPath, fileName];
 
     NSData *data = [[NSData alloc] initWithContentsOfFile:file];
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-    
-    NSLog(@"%@", dic);
+//    NSLog(@"%@", dic);
 
     NoticeModel *noticeModel = [[NoticeModel alloc] initWithDictionary:dic error:nil];
     [noticeModel calculateLinesForEachNoticeWithWidth:CONTENT_WIDTH_FLOAT andFont:15];
-    NSLog(@"linesArr: %@", noticeModel.heightsList);
+//    NSLog(@"linesArr: %@", noticeModel.heightsList);
     
     self.noticeModel = noticeModel;
 }
 
 // MARK: Networking Related
+// Reserved for real enviroment that requires data from network
 - (void)fetchData{
-    
-    NSLog(@"我要开始抓数据啦！");
-    
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     

@@ -47,7 +47,6 @@
         _fakeButton = [[UIButton alloc] initWithFrame:CGRectMake(self.bounds.size.width-50, 0, self.bounds.size.height, 50)];
         [_fakeButton setImage:[UIImage systemImageNamed:@"chevron.right"] forState:UIControlStateNormal];
         [_fakeButton setTintColor:[UIColor systemGray3Color]];
-//        [_fakeButton setTintColor:[UIColor blackColor]];
     }
     return _fakeButton;
 }

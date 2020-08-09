@@ -28,7 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *content;
 @property(nonatomic, strong) NSArray<TipList> *tipList;
 @property(nonatomic, strong) NSString *hasDetail;
-//@property(nonatomic) long postTime;
 @property(nonatomic) NSString *postTime;
 
 @end

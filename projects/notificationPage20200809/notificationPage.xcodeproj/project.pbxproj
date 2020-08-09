@@ -14,7 +14,6 @@
 		6A02B77724DD3023002EF8B4 /* DetailFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02B77624DD3023002EF8B4 /* DetailFooterView.m */; };
 		6A02B77A24DD35EF002EF8B4 /* TipListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A02B77924DD35EF002EF8B4 /* TipListView.m */; };
 		6A11C03D24DD54A2000011FA /* MsgSummaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11C03C24DD54A2000011FA /* MsgSummaryView.m */; };
-		6A11C04024DDA30D000011FA /* TipRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A11C03F24DDA30D000011FA /* TipRowView.m */; };
 		6A3DC13524DCE81300674F16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC13424DCE81300674F16 /* AppDelegate.m */; };
 		6A3DC13824DCE81300674F16 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC13724DCE81300674F16 /* SceneDelegate.m */; };
 		6A3DC13B24DCE81300674F16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A3DC13A24DCE81300674F16 /* ViewController.m */; };
@@ -56,8 +55,6 @@
 		6A02B77924DD35EF002EF8B4 /* TipListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipListView.m; sourceTree = "<group>"; };
 		6A11C03B24DD54A2000011FA /* MsgSummaryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MsgSummaryView.h; sourceTree = "<group>"; };
 		6A11C03C24DD54A2000011FA /* MsgSummaryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgSummaryView.m; sourceTree = "<group>"; };
-		6A11C03E24DDA30D000011FA /* TipRowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipRowView.h; sourceTree = "<group>"; };
-		6A11C03F24DDA30D000011FA /* TipRowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipRowView.m; sourceTree = "<group>"; };
 		6A3DC13024DCE81300674F16 /* notificationPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notificationPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3DC13324DCE81300674F16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6A3DC13424DCE81300674F16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,8 +115,6 @@
 				6A02B77624DD3023002EF8B4 /* DetailFooterView.m */,
 				6A02B77824DD35EF002EF8B4 /* TipListView.h */,
 				6A02B77924DD35EF002EF8B4 /* TipListView.m */,
-				6A11C03E24DDA30D000011FA /* TipRowView.h */,
-				6A11C03F24DDA30D000011FA /* TipRowView.m */,
 				6A11C03B24DD54A2000011FA /* MsgSummaryView.h */,
 				6A11C03C24DD54A2000011FA /* MsgSummaryView.m */,
 			);
@@ -362,7 +357,6 @@
 			files = (
 				6A3DC13B24DCE81300674F16 /* ViewController.m in Sources */,
 				6A3DC13524DCE81300674F16 /* AppDelegate.m in Sources */,
-				6A11C04024DDA30D000011FA /* TipRowView.m in Sources */,
 				6A02B77724DD3023002EF8B4 /* DetailFooterView.m in Sources */,
 				6A02B77A24DD35EF002EF8B4 /* TipListView.m in Sources */,
 				6A3DC14624DCE81400674F16 /* main.m in Sources */,
