@@ -28,6 +28,7 @@
 //    [but1 addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventTouchUpInside];
 //
 //    [self.view addSubview: but1];
+    [self readFromFile:@"notice"];
     
     [self.view addSubview:self.tableView];
     
