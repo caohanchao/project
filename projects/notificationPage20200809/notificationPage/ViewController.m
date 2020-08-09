@@ -28,7 +28,7 @@
 //    [but1 addTarget:self action:@selector(fetchData) forControlEvents:UIControlEventTouchUpInside];
 //
 //    [self.view addSubview: but1];
-    
+    NSLog(@"12344");
     NSLog(@"23333");
     
     [self.view addSubview:self.tableView];
