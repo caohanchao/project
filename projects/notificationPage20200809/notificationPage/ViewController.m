@@ -30,6 +30,8 @@
 //    [self.view addSubview: but1];
     [self readFromFile:@"notice"];
     
+    NSLog(@"23333");
+    
     [self.view addSubview:self.tableView];
     
     [self setNavigationBar];
